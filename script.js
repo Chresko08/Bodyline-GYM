@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS Animation Library
+    AOS.init({
+        once: true,
+        offset: 100,
+        duration: 800,
+        easing: 'ease-out-cubic',
+    });
+
+    // Remove Loader
+    const loader = document.querySelector('.loader');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+    }, 500);
+
     // Mobile Menu Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navMenu = document.querySelector('.nav-menu');
@@ -8,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenu.classList.toggle('is-active');
     });
 
-    // Close menu when clicking a link
+    // Close menu when clicking a link (Mobile)
     document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
         navMenu.classList.remove('active');
         mobileMenu.classList.remove('is-active');
@@ -18,15 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.backgroundColor = 'rgba(17, 17, 17, 0.98)';
-            navbar.style.padding = '15px 0';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
-            navbar.style.padding = '20px 0';
+            navbar.classList.remove('scrolled');
         }
     });
 
-    // Smooth Scroll for Button
+    // Smooth Scroll for Hash Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -46,46 +58,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
 
-    // Intersection Observer for Scroll Animations
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-up');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Add animation class to elements
-    const animatedElements = document.querySelectorAll('.schedule-card, .amenity-card, .section-title, .trainer-content');
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
+// Tab Functionality for Schedules
+function openTab(evt, tabId) {
+    // Get the parent container of the clicked button to isolate the tabs
+    const tabContainer = evt.currentTarget.closest('.tab-container');
+    
+    // Hide all tab contents within this container
+    const tabContents = tabContainer.querySelectorAll('.tab-content');
+    tabContents.forEach(tab => {
+        tab.classList.remove('active');
     });
 
-    // Add class for the transition
-    const styleSheet = document.createElement("style");
-    styleSheet.innerText = `
-        .animate-up {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-        .is-active .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .is-active .bar:nth-child(1) {
-            transform: translateY(8px) rotate(45deg);
-        }
-        .is-active .bar:nth-child(3) {
-            transform: translateY(-8px) rotate(-45deg);
-        }
-    `;
-    document.head.appendChild(styleSheet);
-});
+    // Remove active class from all buttons within this container
+    const tabBtns = tabContainer.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    tabContainer.querySelector('#' + tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}

@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodyline Gym | Build Strength, Build Confidence</title>
-    <meta name="description" content="Bodyline Gym in Prayagraj. Expert training, modern equipment, and results-driven workout schedules. Join the best gym in Civil Lines today.">
+    <title>Bodyline Gym | Modern Fitness Experience</title>
+    <meta name="description" content="Bodyline Gym in Prayagraj. Expert training by Mo. Javed, modern equipment, and tailored workout schedules.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Loading Overlay -->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">BODYLINE <span class="text-primary">GYM</span></a>
+            <a href="#" class="logo">BODYLINE<span>.</span></a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -27,212 +34,231 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#schedules" class="nav-link">Schedules</a></li>
                 <li><a href="#trainer" class="nav-link">Trainer</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#contact" class="btn btn-primary">Join Now</a></li>
+                <li><a href="#contact" class="btn btn-outline-nav">Join: ₹1000/mo</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <h1 class="hero-title reveal">BUILD STRENGTH.<br>BUILD <span class="text-outline">CONFIDENCE.</span></h1>
-            <p class="hero-subtitle reveal-delay">NO EXCUSES. JUST RESULTS.</p>
-            <div class="hero-cta reveal-delay-2">
-                <a href="#schedules" class="btn btn-primary">View Schedules</a>
-                <a href="#contact" class="btn btn-outline">Visit Us</a>
+        <div class="hero-bg"></div>
+        <div class="container hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hero-badge">Welcome to the New Era</div>
+            <h1 class="hero-title">ELEVATE YOUR <br><span class="text-gradient">FITNESS</span> GAME</h1>
+            <p class="hero-subtitle">Premium equipment. Expert coaching. Unbeatable community.</p>
+            <div class="hero-cta">
+                <a href="#schedules" class="btn btn-primary btn-glow">Explore Plans</a>
+                <a href="#gallery" class="btn btn-outline"><i class="fa-solid fa-play"></i> View Gallery</a>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll Down</p>
         </div>
     </header>
 
-    <!-- Quick Info Bar -->
-    <section class="info-bar">
-        <div class="container info-grid">
-            <div class="info-item">
-                <i class="fa-regular fa-clock text-primary"></i>
-                <div class="info-text">
-                    <h3>Morning</h3>
-                    <p>5:00 AM - 10:00 AM</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-moon text-primary"></i>
-                <div class="info-text">
-                    <h3>Evening</h3>
-                    <p>5:00 PM - 9:00 PM</p>
-                </div>
-            </div>
-            <div class="info-item">
-                <i class="fa-solid fa-location-dot text-primary"></i>
-                <div class="info-text">
-                    <h3>Location</h3>
-                    <p>Civil Lines, Prayagraj</p>
-                </div>
-            </div>
+    <!-- Quick Info Marquee -->
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>⚡ ₹1000/MONTH ONLY</span>
+            <span class="dot">•</span>
+            <span>MODERN EQUIPMENT</span>
+            <span class="dot">•</span>
+            <span>EXPERT TRAINER MO. JAVED</span>
+            <span class="dot">•</span>
+            <span>⚡ ₹1000/MONTH ONLY</span>
+            <span class="dot">•</span>
+            <span>MODERN EQUIPMENT</span>
+            <span class="dot">•</span>
+            <span>EXPERT TRAINER MO. JAVED</span>
         </div>
-    </section>
+    </div>
 
-    <!-- Amenities / About -->
-    <section class="amenities section-padding">
+    <!-- Interactive Gallery Section (Placeholder for Maps Photos) -->
+    <section id="gallery" class="gallery section-padding bg-dark">
         <div class="container">
-            <div class="section-header center">
-                <h2 class="section-title">WHY <span class="text-primary">BODYLINE?</span></h2>
-                <div class="separator"></div>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">OUR <span class="text-gradient">FACILITY</span></h2>
+                <p class="section-desc">Take a look at our modern, fully-equipped gym floor. (Note: These are high-quality placeholder images. Google Maps photos require an API integration to fetch dynamically.)</p>
             </div>
-            <div class="amenities-grid">
-                <div class="amenity-card">
-                    <i class="fa-solid fa-dumbbell"></i>
-                    <h3>Modern Equipment</h3>
-                    <p>Top-tier machinery for every muscle group.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" alt="Gym Floor">
+                    <div class="gallery-overlay"><span>Dumbbell Area</span></div>
                 </div>
-                <div class="amenity-card">
-                    <i class="fa-solid fa-user-ninja"></i>
-                    <h3>Expert Guidance</h3>
-                    <p>Personalized training by Mo Javed.</p>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1470&auto=format&fit=crop" alt="Cardio">
+                    <div class="gallery-overlay"><span>Cardio Section</span></div>
                 </div>
-                <div class="amenity-card">
-                    <i class="fa-solid fa-square-parking"></i>
-                    <h3>Accessible</h3>
-                    <p>Wheelchair accessible parking & entrance.</p>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop" alt="Machines">
+                    <div class="gallery-overlay"><span>Machine Weights</span></div>
                 </div>
-                <div class="amenity-card">
-                    <i class="fa-solid fa-check"></i>
-                    <h3>Restroom</h3>
-                    <p>Clean and hygienic facilities available.</p>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1470&auto=format&fit=crop" alt="Free Weights">
+                    <div class="gallery-overlay"><span>Free Weights</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Schedules Section -->
+    <!-- Schedules Section with Tabs -->
     <section id="schedules" class="schedules section-padding bg-darker">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">WORKOUT <span class="text-primary">SCHEDULES</span></h2>
-                <p class="section-desc">Proven splits designed for maximum hypertrophy and strength.</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">WORKOUT <span class="text-gradient">SCHEDULES</span></h2>
+                <p class="section-desc">Tailored programs for every experience level.</p>
             </div>
             
-            <div class="schedules-grid">
+            <div class="schedule-tabs" data-aos="fade-up">
                 <!-- Schedule 1 -->
-                <div class="schedule-card">
-                    <div class="card-header">
-                        <h3>SCHEDULE 01</h3>
-                        <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
+                <div class="schedule-block">
+                    <h3 class="schedule-title"><i class="fa-solid fa-bolt text-primary"></i> SCHEDULE 01 (Bi/Tri, Shoulder/Legs, Chest/Back)</h3>
+                    <div class="tab-container">
+                        <div class="tab-headers">
+                            <button class="tab-btn active" onclick="openTab(event, 's1-beg')">Beginner</button>
+                            <button class="tab-btn" onclick="openTab(event, 's1-int')">Intermediate</button>
+                            <button class="tab-btn" onclick="openTab(event, 's1-adv')">Advanced</button>
+                        </div>
+                        <div id="s1-beg" class="tab-content active">
+                            <ul>
+                                <li>Light dumbbells and machine curls (3 sets x 12 reps)</li>
+                                <li>Machine shoulder press and bodyweight squats</li>
+                                <li>Machine chest press and lat pulldowns</li>
+                            </ul>
+                        </div>
+                        <div id="s1-int" class="tab-content">
+                            <ul>
+                                <li>Barbell curls and skull crushers (4 sets x 10 reps)</li>
+                                <li>Dumbbell overhead press, leg press, lunges</li>
+                                <li>Bench press, incline dumbbell, seated cable rows</li>
+                            </ul>
+                        </div>
+                        <div id="s1-adv" class="tab-content">
+                            <ul>
+                                <li>Heavy barbell curls, weighted dips, tricep extensions (5 sets)</li>
+                                <li>Military press, heavy squats, lateral raises, leg extensions</li>
+                                <li>Heavy bench, weighted pullups, deadlifts</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="schedule-list">
-                        <li><span>Biceps / Triceps</span></li>
-                        <li><span>Shoulder / Thighs</span></li>
-                        <li><span>Chest / Back</span></li>
-                    </ul>
                 </div>
 
                 <!-- Schedule 2 -->
-                <div class="schedule-card">
-                    <div class="card-header">
-                        <h3>SCHEDULE 02</h3>
-                        <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
+                <div class="schedule-block">
+                    <h3 class="schedule-title"><i class="fa-solid fa-fire text-primary"></i> SCHEDULE 02 (Back/Bi, Chest/Tri, Shoulder/Legs)</h3>
+                    <div class="tab-container">
+                        <div class="tab-headers">
+                            <button class="tab-btn active" onclick="openTab(event, 's2-beg')">Beginner</button>
+                            <button class="tab-btn" onclick="openTab(event, 's2-int')">Intermediate</button>
+                            <button class="tab-btn" onclick="openTab(event, 's2-adv')">Advanced</button>
+                        </div>
+                        <div id="s2-beg" class="tab-content active">
+                            <ul>
+                                <li>Lat pulldown, seated row, dumbbell curl</li>
+                                <li>Machine chest press, tricep pushdown</li>
+                                <li>Dumbbell shoulder press, leg extensions</li>
+                            </ul>
+                        </div>
+                        <div id="s2-int" class="tab-content">
+                            <ul>
+                                <li>Pullups, barbell row, hammer curls</li>
+                                <li>Bench press, incline press, skullcrushers</li>
+                                <li>Overhead press, squats, calf raises</li>
+                            </ul>
+                        </div>
+                        <div id="s2-adv" class="tab-content">
+                            <ul>
+                                <li>Weighted pullups, T-bar rows, heavy preacher curls</li>
+                                <li>Heavy bench, weighted dips, overhead tricep extensions</li>
+                                <li>Heavy squats, military press, hack squats</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="schedule-list">
-                        <li><span>Back / Biceps</span></li>
-                        <li><span>Chest / Triceps</span></li>
-                        <li><span>Shoulder / Thighs</span></li>
-                    </ul>
                 </div>
 
                 <!-- Schedule 3 -->
-                <div class="schedule-card">
-                    <div class="card-header">
-                        <h3>SCHEDULE 03</h3>
-                        <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
+                <div class="schedule-block">
+                    <h3 class="schedule-title"><i class="fa-solid fa-dumbbell text-primary"></i> SCHEDULE 03 (Shoulder/Bi, Chest/Tri, Back/Legs)</h3>
+                    <div class="tab-container">
+                        <div class="tab-headers">
+                            <button class="tab-btn active" onclick="openTab(event, 's3-beg')">Beginner</button>
+                            <button class="tab-btn" onclick="openTab(event, 's3-int')">Intermediate</button>
+                            <button class="tab-btn" onclick="openTab(event, 's3-adv')">Advanced</button>
+                        </div>
+                        <div id="s3-beg" class="tab-content active">
+                            <ul>
+                                <li>Machine shoulder press, cable curls</li>
+                                <li>Pushups (modified), tricep pushdowns</li>
+                                <li>Assisted pullups, goblet squats</li>
+                            </ul>
+                        </div>
+                        <div id="s3-int" class="tab-content">
+                            <ul>
+                                <li>Dumbbell press, lateral raises, barbell curls</li>
+                                <li>Flat bench, incline dumbbell, close-grip bench</li>
+                                <li>Barbell rows, leg press, Romanian deadlifts</li>
+                            </ul>
+                        </div>
+                        <div id="s3-adv" class="tab-content">
+                            <ul>
+                                <li>Heavy military press, Arnold press, strict barbell curls</li>
+                                <li>Heavy bench press, weighted dips, French press</li>
+                                <li>Deadlifts, heavy barbell rows, heavy squats</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="schedule-list">
-                        <li><span>Shoulder / Biceps</span></li>
-                        <li><span>Chest / Triceps</span></li>
-                        <li><span>Back / Thighs</span></li>
-                    </ul>
                 </div>
 
-                <!-- Schedule 4 -->
-                <div class="schedule-card">
-                    <div class="card-header">
-                        <h3>SCHEDULE 04</h3>
-                        <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
-                    </div>
-                    <ul class="schedule-list">
-                        <li><span>Shoulder</span></li>
-                        <li><span>Biceps</span></li>
-                        <li><span>Chest</span></li>
-                        <li><span>Triceps</span></li>
-                        <li><span>Back</span></li>
-                        <li><span>Thighs</span></li>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Section (Modern Card) -->
+    <section id="trainer" class="trainer section-padding bg-dark">
+        <div class="container">
+            <div class="trainer-card" data-aos="fade-up">
+                <div class="trainer-image">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Mo. Javed">
+                </div>
+                <div class="trainer-info">
+                    <div class="trainer-badge">Head Coach</div>
+                    <h2>MO. JAVED</h2>
+                    <p class="trainer-bio">With years of expertise, Mo. Javed has transformed countless lives through discipline and tailored fitness regimes. Join Bodyline and let him guide you to your peak physical condition.</p>
+                    <ul class="trainer-features">
+                        <li><i class="fa-solid fa-check-circle text-primary"></i> Personalized Diet Plans</li>
+                        <li><i class="fa-solid fa-check-circle text-primary"></i> Form & Technique Correction</li>
+                        <li><i class="fa-solid fa-check-circle text-primary"></i> Motivation & Mentorship</li>
                     </ul>
+                    <a href="tel:09838070671" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 09838070671</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trainer Section -->
-    <section id="trainer" class="trainer section-padding">
-        <div class="container trainer-container">
-            <div class="trainer-content">
-                <h2 class="section-title">HEAD TRAINER: <span class="text-primary">MO JAVED</span></h2>
-                <p class="trainer-bio">With years of experience in sculpting physiques, Mo Javed leads Bodyline Gym with a focus on discipline, technique, and consistency. No shortcuts, just hard work.</p>
-                <div class="trainer-stats">
-                    <div class="stat">
-                        <span class="stat-num">100+</span>
-                        <span class="stat-label">Clients Transformed</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">10+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                </div>
-            </div>
-            <div class="trainer-image-placeholder">
-                <div class="placeholder-content">
-                    <i class="fa-solid fa-user-large"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Map -->
+    <!-- Contact Section -->
     <section id="contact" class="contact section-padding bg-darker">
         <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2 class="section-title">GET IN <span class="text-primary">TOUCH</span></h2>
-                    <p>Visit us today or contact us for membership details.</p>
-                    
-                    <ul class="contact-details">
-                        <li>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <h4>Address</h4>
-                                <p>76/4A, Stanley Rd, Kamla Nagar, Civil Lines, Prayagraj, Uttar Pradesh 211002</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone"></i>
-                            <div>
-                                <h4>Phone / WhatsApp</h4>
-                                <p><a href="tel:+919838070671">098380 70671</a></p>
-                                <p><a href="tel:+919838094850">098380 94850</a></p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-clock"></i>
-                            <div>
-                                <h4>Sunday Closed</h4>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="contact-grid">
+                <div class="contact-card" data-aos="fade-right">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Location</h3>
+                    <p>76/4A, Stanley Rd, Kamla Nagar, Civil Lines, Prayagraj, UP 211002</p>
                 </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3601.879737525391!2d81.83401737596044!3d25.475698577535456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399aca709123df73%3A0xe679883f36a8d795!2sBodyline!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-card highlight" data-aos="fade-up">
+                    <div class="contact-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <h3>Membership</h3>
+                    <p class="fees-text">₹1000 / Month</p>
+                    <p>No hidden fees. Pure gains.</p>
+                </div>
+                <div class="contact-card" data-aos="fade-left">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Contact Mo. Javed</h3>
+                    <p><a href="tel:09838070671">09838070671</a></p>
                 </div>
             </div>
         </div>
@@ -249,6 +275,8 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
