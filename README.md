@@ -31,5 +31,5 @@ Welcome to the Bodyline Gym website repository! This is a static, responsive sin
 Simply clone the repository and open `index.html` in your web browser. No build steps or local server required!
 
 ```bash
-git clone https://github.com/Chresko08/Bodyline-GYM.git
+git clone <repository-url>
 ```
